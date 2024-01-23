@@ -7,7 +7,7 @@ class MainWindow
 private:
 	HWND hWnd;
 
-	MainWindow(HWND hWnd);
+	MainWindow();
 
 	static MainWindow* window;
 
