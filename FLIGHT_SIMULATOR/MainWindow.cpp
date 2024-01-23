@@ -3,17 +3,20 @@
 MainWindow* MainWindow::getWindow()
 {
 	if (window == NULL)
-		window = new MainWindow(0); // TODO: create real window
-		window = new MainWindow(); // TODO: create real window
+		window = new MainWindow();
 
 	return window;
 }
 
 void MainWindow::deleteWindow()
 {
-	// TODO: properly close window
 	delete window;
 	window = NULL;
+}
+
+LRESULT MainWindow::windowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+	return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
 
 MainWindow* MainWindow::window = NULL;
