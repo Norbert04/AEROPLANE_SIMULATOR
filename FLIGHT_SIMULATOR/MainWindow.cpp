@@ -42,4 +42,9 @@ LRESULT MainWindow::windowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPara
 	return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
 
+HWND MainWindow::getHWnd()
+{
+	return hWnd;
+}
+
 MainWindow* MainWindow::window = NULL;
