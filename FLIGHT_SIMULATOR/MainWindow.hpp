@@ -17,5 +17,7 @@ public:
 
 	static MainWindow* getWindow();
 	static void deleteWindow();
+
+	LRESULT CALLBACK windowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 };
 
