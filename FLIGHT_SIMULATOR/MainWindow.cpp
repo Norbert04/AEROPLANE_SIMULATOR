@@ -9,7 +9,7 @@ MainWindow::MainWindow()
 	windowClass.hInstance = GetModuleHandle(NULL);
 	windowClass.lpszClassName = windowClassName;
 
-	window = CreateWindowEx(
+	hWnd = CreateWindowEx(
 		0,
 		windowClassName,
 		L"flight simulator",
