@@ -3,7 +3,7 @@
 MainWindow::MainWindow()
 {
 	const wchar_t windowClassName[] = L"Main Window";
-	
+
 	WNDCLASS windowClass = {};
 	windowClass.lpfnWndProc = windowProc;
 	windowClass.hInstance = GetModuleHandle(NULL);
@@ -41,7 +41,15 @@ void MainWindow::deleteWindow()
 
 LRESULT MainWindow::windowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-	return DefWindowProc(hwnd, uMsg, wParam, lParam);
+	switch (uMsg)
+	{
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		return 0;
+
+	default:
+		return DefWindowProc(hwnd, uMsg, wParam, lParam);
+	}
 }
 
 HWND MainWindow::getHWnd()
