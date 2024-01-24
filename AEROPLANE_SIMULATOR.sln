@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FLIGHT_SIMULATOR", "FLIGHT_SIMULATOR\FLIGHT_SIMULATOR.vcxproj", "{06921BE7-C849-42CB-AFB2-069AB5D9D560}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AEROPLANE_SIMULATOR", "AEROPLANE_SIMULATOR\AEROPLANE_SIMULATOR.vcxproj", "{EF8F0DAC-62F9-4852-A8AA-FE87E5DEBE5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{06921BE7-C849-42CB-AFB2-069AB5D9D560}.Debug|x64.ActiveCfg = Debug|x64
-		{06921BE7-C849-42CB-AFB2-069AB5D9D560}.Debug|x64.Build.0 = Debug|x64
-		{06921BE7-C849-42CB-AFB2-069AB5D9D560}.Release|x64.ActiveCfg = Release|x64
-		{06921BE7-C849-42CB-AFB2-069AB5D9D560}.Release|x64.Build.0 = Release|x64
+		{EF8F0DAC-62F9-4852-A8AA-FE87E5DEBE5E}.Debug|x64.ActiveCfg = Debug|x64
+		{EF8F0DAC-62F9-4852-A8AA-FE87E5DEBE5E}.Debug|x64.Build.0 = Debug|x64
+		{EF8F0DAC-62F9-4852-A8AA-FE87E5DEBE5E}.Release|x64.ActiveCfg = Release|x64
+		{EF8F0DAC-62F9-4852-A8AA-FE87E5DEBE5E}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
