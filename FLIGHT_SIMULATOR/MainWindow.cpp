@@ -9,6 +9,8 @@ MainWindow::MainWindow()
 	windowClass.hInstance = GetModuleHandle(NULL);
 	windowClass.lpszClassName = windowClassName;
 
+	RegisterClass(&windowClass);
+
 	hWnd = CreateWindowEx(
 		0,
 		windowClassName,
