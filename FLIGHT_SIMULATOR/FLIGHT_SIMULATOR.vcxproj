@@ -16,6 +16,7 @@
     <ProjectGuid>{06921be7-c849-42cb-afb2-069ab5d9d560}</ProjectGuid>
     <RootNamespace>FLIGHTSIMULATOR</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>AEROPLANE_SIMULATOR</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
