@@ -16,5 +16,5 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR, int nCmdShow)
 		DispatchMessage(&msg);
 	}
 
-	return 0;
+	return msg.wParam;
 }
