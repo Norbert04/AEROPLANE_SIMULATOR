@@ -47,6 +47,18 @@ LRESULT MainWindow::windowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPara
 		PostQuitMessage(0);
 		return 0;
 
+	case WM_KEYDOWN:
+		switch (wParam)
+		{
+		case VK_ESCAPE:
+			PostQuitMessage(0);
+			return 0;
+
+		default:
+			return 0;
+		}
+		break;
+
 	default:
 		return DefWindowProc(hwnd, uMsg, wParam, lParam);
 	}
