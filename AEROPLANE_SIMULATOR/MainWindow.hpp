@@ -5,6 +5,8 @@
 class MainWindow
 {
 private:
+	static const wchar_t windowClassName[];
+
 	HWND hWnd;
 
 	MainWindow();

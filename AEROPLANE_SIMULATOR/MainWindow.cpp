@@ -2,8 +2,6 @@
 
 MainWindow::MainWindow()
 {
-	const wchar_t windowClassName[] = L"Main Window";
-
 	WNDCLASS windowClass = {};
 	windowClass.lpfnWndProc = windowProc;
 	windowClass.hInstance = GetModuleHandle(NULL);
@@ -35,6 +33,7 @@ MainWindow* MainWindow::getWindow()
 
 void MainWindow::deleteWindow()
 {
+	UnregisterClass(windowClassName, GetModuleHandle(NULL));
 	delete window;
 	window = NULL;
 }
@@ -70,3 +69,5 @@ HWND MainWindow::getHWnd()
 }
 
 MainWindow* MainWindow::window = NULL;
+
+const wchar_t MainWindow::windowClassName[] = L"Main Window";
