@@ -87,6 +87,13 @@
   <ItemGroup>
     <ClInclude Include="includes.hpp" />
     <ClInclude Include="MainWindow.hpp" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AEROPLANE_SIMULATOR.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
