@@ -1,6 +1,7 @@
 #pragma once
 
 #include "includes.hpp"
+#include "resource.h"
 
 class MainWindow
 {

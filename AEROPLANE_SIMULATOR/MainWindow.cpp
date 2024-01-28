@@ -2,10 +2,12 @@
 
 MainWindow::MainWindow()
 {
+	HINSTANCE hInst = GetModuleHandle(NULL);
 	WNDCLASS windowClass = {};
 	windowClass.lpfnWndProc = windowProc;
-	windowClass.hInstance = GetModuleHandle(NULL);
+	windowClass.hInstance = hInst;
 	windowClass.lpszClassName = windowClassName;
+	windowClass.hIcon = static_cast<HICON>(LoadImage(hInst, MAKEINTRESOURCE(IDI_ICON1), IMAGE_ICON, 256, 256, 0));
 
 	RegisterClass(&windowClass);
 
@@ -18,7 +20,7 @@ MainWindow::MainWindow()
 		CW_USEDEFAULT, CW_USEDEFAULT,
 		NULL,
 		NULL,
-		GetModuleHandle(NULL),
+		hInst,
 		NULL
 	);
 }
