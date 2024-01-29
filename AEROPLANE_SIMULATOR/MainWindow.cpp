@@ -14,7 +14,7 @@ MainWindow::MainWindow()
 	hWnd = CreateWindowEx(
 		0,
 		windowClassName,
-		L"flight simulator",
+		L"aeroplane simulator",
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, CW_USEDEFAULT,
 		CW_USEDEFAULT, CW_USEDEFAULT,
