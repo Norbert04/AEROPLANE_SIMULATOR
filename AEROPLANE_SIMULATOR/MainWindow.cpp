@@ -74,7 +74,7 @@ MainWindow* MainWindow::window = NULL;
 
 const wchar_t MainWindow::windowClassName[] = L"Main Window";
 
-const D3D_FEATURE_LEVEL MainWindow::levels[] = {
+const D3D_FEATURE_LEVEL MainWindow::featureLevels[] = {
 	D3D_FEATURE_LEVEL_12_2,
 	D3D_FEATURE_LEVEL_12_1,
 	D3D_FEATURE_LEVEL_12_0,

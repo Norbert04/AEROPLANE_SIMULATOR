@@ -7,7 +7,7 @@ class MainWindow
 {
 private:
 	static const wchar_t windowClassName[];
-	static const D3D_FEATURE_LEVEL levels[];
+	static const D3D_FEATURE_LEVEL featureLevels[];
 
 	HWND hWnd;
 
