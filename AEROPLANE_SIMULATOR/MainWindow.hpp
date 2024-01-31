@@ -9,6 +9,8 @@ private:
 	static const wchar_t windowClassName[];
 	static const D3D_FEATURE_LEVEL featureLevels[];
 
+	D3D_FEATURE_LEVEL featureLevel;
+
 	HWND hWnd;
 
 	MainWindow();

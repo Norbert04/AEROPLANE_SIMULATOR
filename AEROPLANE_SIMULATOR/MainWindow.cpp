@@ -2,6 +2,8 @@
 
 MainWindow::MainWindow()
 {
+	// create window
+
 	HINSTANCE hInst = GetModuleHandle(NULL);
 	WNDCLASS windowClass = {};
 	windowClass.lpfnWndProc = windowProc;
@@ -22,6 +24,30 @@ MainWindow::MainWindow()
 		NULL,
 		hInst,
 		NULL
+	);
+
+	// create device
+
+	UINT flags = D3D11_CREATE_DEVICE_BGRA_SUPPORT;
+
+#if defined(_DEBUG) || defined(DEBUG)
+	flags |= D3D11_CREATE_DEVICE_DEBUG;
+#endif // defined(_DEBUG) || defined(DEBUG)
+
+	Microsoft::WRL::ComPtr<ID3D11Device> device;
+	Microsoft::WRL::ComPtr<ID3D11DeviceContext> deviceContext;
+
+	D3D11CreateDevice(
+		NULL,
+		D3D_DRIVER_TYPE_HARDWARE,
+		NULL,
+		flags,
+		featureLevels,
+		ARRAYSIZE(featureLevels),
+		D3D11_SDK_VERSION,
+		&device,
+		&featureLevel,
+		&deviceContext
 	);
 }
 
