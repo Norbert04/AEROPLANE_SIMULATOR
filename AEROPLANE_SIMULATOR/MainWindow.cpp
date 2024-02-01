@@ -49,6 +49,9 @@ MainWindow::MainWindow()
 		&featureLevel,
 		&deviceContext
 	);
+
+	device.As(&d3dDevice);
+	deviceContext.As(&d3dDeviceContext);
 }
 
 MainWindow* MainWindow::getWindow()
