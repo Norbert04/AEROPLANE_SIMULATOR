@@ -38,6 +38,14 @@ MainWindow::MainWindow()
 	Microsoft::WRL::ComPtr<ID3D11Device> device;
 	Microsoft::WRL::ComPtr<ID3D11DeviceContext> deviceContext;
 
+	D3D_FEATURE_LEVEL featureLevels[] = {
+	D3D_FEATURE_LEVEL_12_2,
+	D3D_FEATURE_LEVEL_12_1,
+	D3D_FEATURE_LEVEL_12_0,
+	D3D_FEATURE_LEVEL_11_1,
+	D3D_FEATURE_LEVEL_11_0,
+	};
+
 	D3D11CreateDevice(
 		NULL,
 		D3D_DRIVER_TYPE_HARDWARE,
@@ -152,11 +160,3 @@ HWND MainWindow::getHWnd()
 MainWindow* MainWindow::window = NULL;
 
 const wchar_t MainWindow::windowClassName[] = L"Main Window";
-
-const D3D_FEATURE_LEVEL MainWindow::featureLevels[] = {
-	D3D_FEATURE_LEVEL_12_2,
-	D3D_FEATURE_LEVEL_12_1,
-	D3D_FEATURE_LEVEL_12_0,
-	D3D_FEATURE_LEVEL_11_1,
-	D3D_FEATURE_LEVEL_11_0,
-};

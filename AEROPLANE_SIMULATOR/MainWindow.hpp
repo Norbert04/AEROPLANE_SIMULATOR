@@ -7,7 +7,6 @@ class MainWindow
 {
 private:
 	static const wchar_t windowClassName[];
-	static const D3D_FEATURE_LEVEL featureLevels[];
 
 	Microsoft::WRL::ComPtr<ID3D11Device> d3dDevice;
 	Microsoft::WRL::ComPtr<ID3D11DeviceContext> d3dDeviceContext;
