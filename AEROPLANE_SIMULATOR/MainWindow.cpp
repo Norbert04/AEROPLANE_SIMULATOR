@@ -11,6 +11,7 @@ MainWindow::MainWindow()
 	windowClass.lpszClassName = windowClassName;
 	windowClass.hIcon = static_cast<HICON>(LoadImage(hInst, MAKEINTRESOURCE(IDI_ICON1), IMAGE_ICON, 256, 256, 0));
 
+
 	RegisterClass(&windowClass);
 
 	hWnd = CreateWindowEx(
@@ -85,7 +86,7 @@ MainWindow::MainWindow()
 	swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL;
 
 	Microsoft::WRL::ComPtr<IDXGIDevice4> deviceDXGI;
-	deviceDXGI.As(&dxgiDevice);
+	d3dDevice.As(&deviceDXGI);
 
 	Microsoft::WRL::ComPtr<IDXGIFactory> factory;
 	Microsoft::WRL::ComPtr<IDXGIAdapter> adapter;
