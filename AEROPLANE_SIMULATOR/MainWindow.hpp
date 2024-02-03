@@ -11,6 +11,8 @@ private:
 
 	Microsoft::WRL::ComPtr<ID3D11Device> d3dDevice;
 	Microsoft::WRL::ComPtr<ID3D11DeviceContext> d3dDeviceContext;
+	Microsoft::WRL::ComPtr<IDXGIDevice4> dxgiDevice;
+	Microsoft::WRL::ComPtr<IDXGISwapChain> dxgiSwapChain;
 
 	D3D_FEATURE_LEVEL featureLevel;
 
