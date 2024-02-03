@@ -10,7 +10,7 @@ MainWindow::MainWindow()
 	windowClass.hInstance = hInst;
 	windowClass.lpszClassName = windowClassName;
 	windowClass.hIcon = static_cast<HICON>(LoadImage(hInst, MAKEINTRESOURCE(IDI_ICON1), IMAGE_ICON, 256, 256, 0));
-
+	windowClass.hCursor = LoadCursor(NULL, IDC_ARROW);
 
 	RegisterClass(&windowClass);
 
