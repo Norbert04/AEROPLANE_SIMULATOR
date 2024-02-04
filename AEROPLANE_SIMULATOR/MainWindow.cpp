@@ -109,6 +109,22 @@ MainWindow::MainWindow()
 			&dxgiSwapChain
 		);
 	}
+
+	// render target
+
+	dxgiSwapChain->GetBuffer(
+		0,
+		__uuidof(ID3D11Texture2D),
+		&backBuffer
+	);
+
+	d3dDevice->CreateRenderTargetView(
+		backBuffer.Get(),
+		nullptr,
+		renderTarget.GetAddressOf()
+	);
+
+	backBuffer->GetDesc(&backBufferDesc);
 	// from here on the license specified in the license file is used
 }
 
