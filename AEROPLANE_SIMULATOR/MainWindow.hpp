@@ -12,6 +12,10 @@ private:
 	Microsoft::WRL::ComPtr<ID3D11DeviceContext> d3dDeviceContext;
 	Microsoft::WRL::ComPtr<IDXGIDevice4> dxgiDevice;
 	Microsoft::WRL::ComPtr<IDXGISwapChain> dxgiSwapChain;
+	Microsoft::WRL::ComPtr<ID3D11Texture2D> backBuffer;
+	Microsoft::WRL::ComPtr<ID3D11RenderTargetView> renderTarget;
+
+	D3D11_TEXTURE2D_DESC backBufferDesc;
 
 	D3D_FEATURE_LEVEL featureLevel;
 
