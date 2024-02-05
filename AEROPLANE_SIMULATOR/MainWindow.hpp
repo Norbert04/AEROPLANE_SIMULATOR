@@ -14,6 +14,7 @@ private:
 	Microsoft::WRL::ComPtr<IDXGISwapChain> dxgiSwapChain;
 	Microsoft::WRL::ComPtr<ID3D11Texture2D> backBuffer;
 	Microsoft::WRL::ComPtr<ID3D11RenderTargetView> renderTarget;
+	Microsoft::WRL::ComPtr<ID3D11DepthStencilView> depthStencil;
 
 	D3D11_TEXTURE2D_DESC backBufferDesc;
 
