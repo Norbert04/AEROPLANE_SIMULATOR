@@ -125,6 +125,28 @@ MainWindow::MainWindow()
 	);
 
 	backBuffer->GetDesc(&backBufferDesc);
+
+	CD3D11_TEXTURE2D_DESC depthStencilDesc(
+		DXGI_FORMAT_D24_UNORM_S8_UINT,
+		static_cast<UINT>(backBufferDesc.Width),
+		static_cast<UINT>(backBufferDesc.Height),
+		1, 1,
+		D3D10_BIND_DEPTH_STENCIL
+	);
+
+	d3dDevice->CreateTexture2D(
+		&depthStencilDesc,
+		nullptr,
+		&depthStencilBuffer
+	);
+
+	CD3D11_DEPTH_STENCIL_VIEW_DESC depthStencilViewDesc(D3D11_DSV_DIMENSION_TEXTURE2D);
+
+	d3dDevice->CreateDepthStencilView(
+		depthStencilBuffer.Get(),
+		&depthStencilViewDesc,
+		&depthStencilView
+	);
 	// from here on the license specified in the license file is used
 }
 
