@@ -15,6 +15,7 @@ private:
 	Microsoft::WRL::ComPtr<ID3D11Texture2D> backBuffer;
 	Microsoft::WRL::ComPtr<ID3D11RenderTargetView> renderTarget;
 	Microsoft::WRL::ComPtr<ID3D11Texture2D> depthStencilBuffer;
+	Microsoft::WRL::ComPtr<ID3D11DepthStencilView> depthStencilView;
 
 	D3D11_TEXTURE2D_DESC backBufferDesc;
 
