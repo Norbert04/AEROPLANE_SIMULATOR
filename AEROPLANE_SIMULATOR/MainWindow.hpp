@@ -17,6 +17,8 @@ private:
 	Microsoft::WRL::ComPtr<ID3D11Texture2D> depthStencilBuffer;
 	Microsoft::WRL::ComPtr<ID3D11DepthStencilView> depthStencilView;
 
+	D3D11_VIEWPORT viewport;
+
 	D3D11_TEXTURE2D_DESC backBufferDesc;
 
 	D3D_FEATURE_LEVEL featureLevel;
