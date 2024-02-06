@@ -147,6 +147,19 @@ MainWindow::MainWindow()
 		&depthStencilViewDesc,
 		&depthStencilView
 	);
+
+	//viewport
+
+	ZeroMemory(&viewport, sizeof(viewport));
+	viewport.Height = static_cast<float>(backBufferDesc.Height);
+	viewport.Width = static_cast<float>(backBufferDesc.Width);
+	viewport.MinDepth = 0;
+	viewport.MaxDepth = 1;
+
+	d3dDeviceContext->RSSetViewports(
+		1,
+		&viewport
+	);
 	// from here on the license specified in the license file is used
 }
 
