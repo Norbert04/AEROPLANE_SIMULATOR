@@ -66,6 +66,7 @@ MainWindow::MainWindow()
 
 	//the following code (until the comment marking the end) is edited and licensed under the following license:
 	/*The MIT License(MIT)
+	Copyright(c) 2024 Norbert Niering
 	Copyright(c) Microsoft Corporation
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
