@@ -46,22 +46,6 @@ MainWindow::MainWindow()
 	D3D_FEATURE_LEVEL_11_0,
 	};
 
-	D3D11CreateDevice(
-		NULL,
-		D3D_DRIVER_TYPE_HARDWARE,
-		NULL,
-		flags,
-		featureLevels,
-		ARRAYSIZE(featureLevels),
-		D3D11_SDK_VERSION,
-		&device,
-		&featureLevel,
-		&deviceContext
-	);
-
-	device.As(&d3dDevice);
-	deviceContext.As(&d3dDeviceContext);
-
 	// create swap chain
 
 	//the following code (until the comment marking the end) is edited and licensed under the following license:
@@ -94,22 +78,23 @@ MainWindow::MainWindow()
 	swapChainDesc.Windowed = TRUE;
 	swapChainDesc.SwapEffect = DXGI_SWAP_EFFECT_FLIP_SEQUENTIAL;
 
-	Microsoft::WRL::ComPtr<IDXGIDevice4> deviceDXGI;
-	d3dDevice.As(&deviceDXGI);
+	D3D11CreateDeviceAndSwapChain(
+		NULL,
+		D3D_DRIVER_TYPE_HARDWARE,
+		NULL,
+		flags,
+		featureLevels,
+		ARRAYSIZE(featureLevels),
+		D3D11_SDK_VERSION,
+		&swapChainDesc,
+		&dxgiSwapChain,
+		&device,
+		&featureLevel,
+		&deviceContext
+	);
 
-	Microsoft::WRL::ComPtr<IDXGIFactory> factory;
-	Microsoft::WRL::ComPtr<IDXGIAdapter> adapter;
-
-	if (SUCCEEDED(deviceDXGI->GetAdapter(&adapter)))
-	{
-		adapter->GetParent(IID_PPV_ARGS(&factory));
-
-		factory->CreateSwapChain(
-			d3dDevice.Get(),
-			&swapChainDesc,
-			&dxgiSwapChain
-		);
-	}
+	device.As(&d3dDevice);
+	deviceContext.As(&d3dDeviceContext);
 
 	// render target
 
