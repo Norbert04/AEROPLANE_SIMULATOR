@@ -22,10 +22,12 @@ private:
 	D3D11_TEXTURE2D_DESC backBufferDesc;
 
 	D3D_FEATURE_LEVEL featureLevel;
-
+	
 	HWND hWnd;
 
 	MainWindow();
+
+	void createDeviceDependentResources();
 
 	static MainWindow* window;
 
