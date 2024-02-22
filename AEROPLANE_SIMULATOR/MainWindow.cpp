@@ -149,6 +149,10 @@ MainWindow::MainWindow()
 	// from here on the license specified in the license file is used
 }
 
+void MainWindow::createDeviceDependentResources()
+{
+}
+
 MainWindow* MainWindow::getWindow()
 {
 	if (window == NULL)
