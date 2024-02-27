@@ -27,6 +27,9 @@ MainWindow::MainWindow()
 		NULL
 	);
 
+	if (!IsWindowVisible(hWnd))
+		ShowWindow(hWnd, SW_SHOW);
+
 	// create device
 
 	UINT flags = D3D11_CREATE_DEVICE_BGRA_SUPPORT;
