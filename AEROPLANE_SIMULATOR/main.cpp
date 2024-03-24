@@ -14,6 +14,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR, int nCmdShow)
 	{
 		TranslateMessage(&msg);
 		DispatchMessage(&msg);
+		MainWindow::getWindow()->nextFrame();
 	}
 
 	return msg.wParam;
