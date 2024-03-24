@@ -171,7 +171,7 @@ void MainWindow::deleteWindow()
 	window = NULL;
 }
 
-LRESULT MainWindow::windowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+LRESULT MainWindow::windowProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	switch (uMsg)
 	{
@@ -192,13 +192,18 @@ LRESULT MainWindow::windowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lPara
 		break;
 
 	default:
-		return DefWindowProc(hwnd, uMsg, wParam, lParam);
+		return DefWindowProc(hWnd, uMsg, wParam, lParam);
 	}
 }
 
 HWND MainWindow::getHWnd()
 {
 	return hWnd;
+}
+
+void MainWindow::nextFrame()
+{
+	dxgiSwapChain->Present(1, 0);
 }
 
 MainWindow* MainWindow::window = NULL;

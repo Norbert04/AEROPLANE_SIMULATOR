@@ -41,5 +41,7 @@ public:
 	static LRESULT CALLBACK windowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
 	HWND getHWnd();
+
+	void nextFrame();
 };
 
